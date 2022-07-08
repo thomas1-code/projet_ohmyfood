@@ -1,0 +1,15 @@
+.header{
+    height: 65px;
+    width: 100%;
+    display: flex;
+    &__link{
+        position: relative;
+        top: 27.5px;
+        left: 23px;
+    }
+    &__logo{
+        width: 100%;
+        @include flexbox-center
+    }
+   
+}

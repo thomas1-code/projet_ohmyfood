@@ -12,6 +12,11 @@
   /* Sections
      ========================================================================== */
   
+  body{
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
   main {
     display: block;
   }
@@ -36,6 +41,7 @@
   ul, nav {
     list-style-type: none;
   }
+  
   a {
     text-decoration: none;
     color: inherit;  

@@ -11,6 +11,11 @@ html {
 
 /* Sections
    ========================================================================== */
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 main {
   display: block;
 }
@@ -195,4 +200,32 @@ template {
 
 [hidden] {
   display: none;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+h1 {
+  font-size: 30px;
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.header {
+  height: 65px;
+  width: 100%;
+  display: flex;
+}
+.header__link {
+  position: relative;
+  top: 27.5px;
+  left: 23px;
+}
+.header__logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=menu.css.map */
