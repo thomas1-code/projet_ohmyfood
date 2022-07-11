@@ -1,14 +1,19 @@
 .header{
     height: 65px;
-    width: 100%;
     display: flex;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     &__link{
         position: relative;
-        top: 27.5px;
+        top: 27px;
         left: 23px;
+        width: 18px;
+        font-size: 1.6em;
+        overflow: hidden;
     }
     &__logo{
         width: 100%;
+        margin-top: 10px;
         @include flexbox-center
     }
    

@@ -1,0 +1,13 @@
+.location{
+    height: 50px;
+    background-color: #eaeaea;
+    @include flexbox-center;
+    &__icon{
+        font-size: 1em;
+        margin: 0 15px 0 -25px;
+    }
+    &__description{
+        font-size: 1em;
+        font-weight: 500;
+    }
+}

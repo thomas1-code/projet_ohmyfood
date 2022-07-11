@@ -100,7 +100,7 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
-  margin: 0;
+  border: none;
 }
 
 button,
@@ -144,8 +144,7 @@ legend {
   color: inherit;
   display: table;
   max-width: 100%;
-  padding: 0;
-  /* 3 */
+  padding: 0; /* 3 */
   white-space: normal;
 }
 
@@ -202,29 +201,56 @@ template {
   display: none;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   color: black;
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 1.8em;
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 
+.btn {
+  padding: 1.1em 1.5em;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  border-radius: 25px;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9em;
+  cursor: pointer;
+  box-shadow: 0 5px 10px #c3c3c3;
+}
+.btn--menu {
+  padding: 1.1em 3em;
+}
+.btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 5px 15px #909090;
+}
+
 .header {
   height: 65px;
-  width: 100%;
   display: flex;
+  position: relative;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 .header__link {
   position: relative;
-  top: 27.5px;
+  top: 27px;
   left: 23px;
+  width: 18px;
+  font-size: 1.6em;
+  overflow: hidden;
 }
 .header__logo {
   width: 100%;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;

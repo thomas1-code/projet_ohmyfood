@@ -1,0 +1,17 @@
+.btn{
+    padding: 1.1em 1.5em;
+    background: linear-gradient(170deg, $color-secondary, $color-primary);
+    border-radius: 25px;
+    color: white;
+    font-weight: 500;
+    font-size: 0.9em;
+    cursor: pointer;
+    @include shadow-base;
+    &--menu{
+        padding: 1.1em 3em;
+    }
+    &:hover{
+        filter: brightness(1.1);
+        box-shadow: 0 5px 15px darken($color-background, 40%);
+    }
+}
