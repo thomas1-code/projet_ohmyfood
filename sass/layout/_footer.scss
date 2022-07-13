@@ -1,0 +1,30 @@
+.footer{
+    height: 190px;
+    background-color: #353535;
+    color: #ffffff;
+    padding: 1.5rem;
+    &__heading{
+        margin-bottom: 1rem;
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    &__icon{
+        width: 0.75rem;
+        font-size: 0.75em;
+        &--orientation{
+            transform: rotate(345deg);
+            font-size: 0.65em;
+        }
+    }
+    &__copy{
+        font-size: 1em;
+    }
+}

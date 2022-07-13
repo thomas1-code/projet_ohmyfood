@@ -42,6 +42,7 @@ ul, nav {
 a {
   text-decoration: none;
   color: inherit;
+  font-style: normal;
   background-color: transparent;
 }
 
@@ -216,6 +217,12 @@ h1 {
   font-weight: 400;
 }
 
+.footer__heading {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
 .btn {
   padding: 1.1rem 1.5rem;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
@@ -255,6 +262,37 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer {
+  height: 190px;
+  background-color: #353535;
+  color: #ffffff;
+  padding: 1.5rem;
+}
+.footer__heading {
+  margin-bottom: 1rem;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.footer__icon {
+  width: 0.75rem;
+  font-size: 0.75em;
+}
+.footer__icon--orientation {
+  transform: rotate(345deg);
+  font-size: 0.65em;
+}
+.footer__copy {
+  font-size: 1em;
 }
 
 .location {
