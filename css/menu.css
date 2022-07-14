@@ -223,6 +223,7 @@ h1 {
   font-weight: 400;
 }
 
+<<<<<<< HEAD
 .menu__heading {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
   font-size: 1.7em;
@@ -236,6 +237,10 @@ h1 {
 
 .btn-exploration {
   padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+=======
+.btn {
+  padding: 1.1rem 1.5rem;
+>>>>>>> master
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   border-radius: 25px;
   color: white;
@@ -317,6 +322,7 @@ h1 {
 }
 .footer__copy {
   font-size: 1em;
+<<<<<<< HEAD
 }
 
 .image-menu {
@@ -388,4 +394,6 @@ h1 {
   text-align: center;
   margin-top: 3rem;
   padding-bottom: 3rem;
+=======
+>>>>>>> master
 }/*# sourceMappingURL=menu.css.map */
