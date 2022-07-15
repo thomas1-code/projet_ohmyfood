@@ -1,6 +1,6 @@
 .location{
     height: 50px;
-    background-color: #eaeaea;
+    background: linear-gradient(0deg, #eaeaea 90%, #cfcfcf) ;
     @include flexbox-center;
     &__icon{
         font-size: 1em;

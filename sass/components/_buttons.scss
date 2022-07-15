@@ -5,3 +5,12 @@
 .btn-menu{
     @include btn(3rem);
 }
+
+.btn-header{
+    position: relative;
+    top: 27px;
+    left: 23px;
+    width: 18px;
+    font-size: 1.5em;
+    overflow: hidden;
+}

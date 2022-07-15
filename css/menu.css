@@ -266,40 +266,25 @@ body {
   box-shadow: 0 5px 15px #909090;
 }
 
-.header {
-  height: 65px;
-  display: flex;
-  position: relative;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-}
-.header__logo {
-  width: 100%;
-  margin-top: 0.75rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header-menu {
-  height: 65px;
-  display: flex;
-  position: relative;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-}
-.header-menu__logo {
-  width: 100%;
-  margin-top: 0.75rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header-menu__link {
+.btn-header {
   position: relative;
   top: 27px;
   left: 23px;
   width: 18px;
   font-size: 1.5em;
   overflow: hidden;
+}
+
+.header, .header-menu {
+  height: 65px;
+  display: flex;
+}
+.header__logo, .header-menu__logo {
+  width: 100%;
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {
