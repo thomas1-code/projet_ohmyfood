@@ -15,12 +15,12 @@
         background-color: $color-background;
         border-radius: 25px;
         @include shadow-base;
-        transition: background-color 400ms;
+        transition: all 400ms ease-in-out;
         &:hover{
             background-color: #f5edff;
-        }
-        &:hover .operation__icon{
-            color: $color-primary;
+            & .operation__icon{
+                color: $color-primary
+            }
         }
     }
     &__number{
@@ -36,7 +36,7 @@
     &__icon{
         color: #7e7e7e;
         font-size: 1.1em;
-        transition: color 400ms;
+        transition: color 400ms ease-in-out;
     }
     &__description{
         font-size: 1em;
