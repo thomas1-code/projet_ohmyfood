@@ -15,8 +15,12 @@
         background-color: $color-background;
         border-radius: 25px;
         @include shadow-base;
-        &--background-change{
+        transition: background-color 400ms;
+        &:hover{
             background-color: #f5edff;
+        }
+        &:hover .operation__icon{
+            color: $color-primary;
         }
     }
     &__number{
@@ -32,9 +36,7 @@
     &__icon{
         color: #7e7e7e;
         font-size: 1.1em;
-        &--color-change{
-            color: $color-primary;
-        }
+        transition: color 400ms;
     }
     &__description{
         font-size: 1em;
