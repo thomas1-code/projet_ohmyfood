@@ -15,12 +15,24 @@
         background-color: $color-background;
         border-radius: 25px;
         @include shadow-base;
-        transition: all 400ms ease-in-out;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
         &:hover{
-            background-color: #f5edff;
-            & .operation__icon{
-                color: $color-primary
+            &::after{
+                opacity: 1;
             }
+            & .operation__icon{
+                color: $color-primary;
+            }
+        }
+        &::after{
+            @include pseudo-position;
+            background: #f5edff;  
+            border-radius: 25px;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 400ms ease-in-out;
         }
     }
     &__number{
@@ -36,7 +48,6 @@
     &__icon{
         color: #7e7e7e;
         font-size: 1.1em;
-        transition: color 400ms ease-in-out;
     }
     &__description{
         font-size: 1em;
