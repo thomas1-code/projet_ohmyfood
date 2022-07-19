@@ -366,13 +366,14 @@ body {
   margin-top: -40px;
   border-radius: 40px 40px 0 0;
   z-index: 50;
-  padding: 2rem 1rem;
+  padding: 2rem 0.75rem;
 }
 .menu__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  margin-left: 0.25rem;
 }
 .menu__container {
   margin-bottom: 2.5rem;
@@ -380,61 +381,68 @@ body {
 .menu__tittle {
   font-size: 1em;
   font-weight: 400;
-  margin-bottom: 0.25rem;
+  margin: 0 0 0.25rem 0.25rem;
 }
 .menu__bar {
   width: 40px;
   border-bottom: 3px solid #99E2D0;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0.25rem;
 }
-.menu__body {
+.menu__card {
+  display: flex;
   background-color: #fff;
   box-shadow: 0 5px 10px #c3c3c3;
   margin-bottom: 1rem;
   border-radius: 15px;
-  padding: 0.75rem;
+  padding: 0.75rem 0.5rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
   -webkit-animation: anim-menu 1200ms 400ms ease-in-out backwards;
           animation: anim-menu 1200ms 400ms ease-in-out backwards;
 }
-.menu__body--1 {
+.menu__card--1 {
   -webkit-animation-delay: 120ms;
           animation-delay: 120ms;
 }
-.menu__body--2 {
+.menu__card--2 {
   -webkit-animation-delay: 240ms;
           animation-delay: 240ms;
 }
-.menu__body--3 {
+.menu__card--3 {
   -webkit-animation-delay: 360ms;
           animation-delay: 360ms;
 }
-.menu__body--4 {
+.menu__card--4 {
   -webkit-animation-delay: 480ms;
           animation-delay: 480ms;
 }
-.menu__body--5 {
+.menu__card--5 {
   -webkit-animation-delay: 600ms;
           animation-delay: 600ms;
 }
-.menu__body--6 {
+.menu__card--6 {
   -webkit-animation-delay: 720ms;
           animation-delay: 720ms;
 }
-.menu__body--7 {
+.menu__card--7 {
   -webkit-animation-delay: 840ms;
           animation-delay: 840ms;
 }
-.menu__body--8 {
+.menu__card--8 {
   -webkit-animation-delay: 960ms;
           animation-delay: 960ms;
 }
-.menu__body--9 {
+.menu__card--9 {
   -webkit-animation-delay: 1080ms;
           animation-delay: 1080ms;
 }
-.menu__body--10 {
+.menu__card--10 {
   -webkit-animation-delay: 1200ms;
           animation-delay: 1200ms;
+}
+.menu__body {
+  width: 100%;
 }
 .menu__subtittle {
   padding-bottom: 0.25rem;
@@ -453,7 +461,7 @@ body {
 }
 .menu__price {
   font-weight: 700;
-  margin: 0 0.75rem;
+  margin-right: -0.5rem;
 }
 .menu__btn {
   text-align: center;
