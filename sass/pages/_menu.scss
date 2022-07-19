@@ -31,6 +31,12 @@
         margin-bottom: 1rem;
         border-radius: 15px;
         padding: 0.75rem;
+        animation: anim-menu $anim-menu-dur 400ms ease-in-out backwards;
+        @for $i from 1 through $num-menu{
+            &--#{$i}{
+                animation-delay: $anim-menu-delay * $i;
+            }
+        }
     }
     &__subtittle{
         padding-bottom: 0.25rem;
@@ -55,5 +61,17 @@
         text-align: center;
         margin-top: 3rem;
         padding-bottom: 3rem;
+    }
+}
+
+@keyframes anim-menu{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
     }
 }
