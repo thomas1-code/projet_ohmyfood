@@ -55,3 +55,9 @@
 @mixin spin-border{
     border: 1rem solid transparent;
 }
+
+@mixin suspension-point{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
