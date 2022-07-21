@@ -2,16 +2,18 @@
 @import "./utils/functions";
 @import "./utils/mixins";
 
+@import "./vendors/normalize";
+
 @import "./base/reset";
 @import "./base/typography";
 
 @import "./components/buttons";
+@import "./components/spinner";
 
 @import "./layout/header";
 @import "./layout/container";
 @import "./layout/footer";
 
-@import "./pages/spinner";
 @import "./pages/location";
 @import "./pages/exploration";
 @import "./pages/operation";
