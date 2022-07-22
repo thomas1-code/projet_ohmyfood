@@ -339,7 +339,7 @@ body {
 
 .menu__heading {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
-  font-size: 1.7em;
+  font-size: 1.8em;
   font-weight: 400;
 }
 
@@ -419,6 +419,27 @@ body {
   overflow: hidden;
 }
 
+.btn-heart {
+  transform: scale(1, 1.1);
+  cursor: pointer;
+}
+.btn-heart__regular {
+  opacity: 1;
+  font-size: 1.4em;
+}
+.btn-heart__solid {
+  opacity: 0;
+  font-size: 1.4em;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 1000ms ease-in-out 200ms;
+}
+.btn-heart__solid:hover {
+  opacity: 1;
+}
+
 .header, .header-menu {
   height: 65px;
   display: flex;
@@ -490,9 +511,7 @@ body {
 .menu__header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  margin-left: 0.25rem;
+  margin: 0 1rem 2rem 0.25rem;
 }
 .menu__container {
   margin-bottom: 2.5rem;

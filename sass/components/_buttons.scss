@@ -14,3 +14,23 @@
     font-size: 1.5em;
     overflow: hidden;
 }
+
+.btn-heart{
+    transform: scale(1, 1.1);
+    cursor: pointer;
+    &__regular{
+        opacity: 1;
+        font-size: 1.4em;
+    }
+    &__solid{
+        opacity: 0;
+        font-size: 1.4em;
+        background: linear-gradient($color-primary, $color-secondary);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 1000ms ease-in-out 200ms;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}

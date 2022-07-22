@@ -339,7 +339,7 @@ body {
 
 .menu__heading {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
-  font-size: 1.7em;
+  font-size: 1.8em;
   font-weight: 400;
 }
 
@@ -417,6 +417,27 @@ body {
   width: 18px;
   font-size: 1.5em;
   overflow: hidden;
+}
+
+.btn-heart {
+  transform: scale(1, 1.1);
+  cursor: pointer;
+}
+.btn-heart__regular {
+  opacity: 1;
+  font-size: 1.4em;
+}
+.btn-heart__solid {
+  opacity: 0;
+  font-size: 1.4em;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 1000ms ease-in-out 200ms;
+}
+.btn-heart__solid:hover {
+  opacity: 1;
 }
 
 .loader {
@@ -706,8 +727,8 @@ body {
   height: 30%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
+  align-items: flex-start;
+  padding: 1rem;
 }
 .restaurant__description {
   display: flex;
