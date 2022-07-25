@@ -31,16 +31,16 @@
         margin-bottom: 1rem;
         border-radius: 15px;
         cursor: pointer;
-        animation: anim-menu $anim-menu-dur 400ms ease-in-out backwards;
+        animation: anim-menu $anim-menu-dur ease-in-out 400ms backwards;
         @for $i from 1 through $num-menu{
             &--#{$i}{
                 animation-delay: $anim-menu-delay * $i;
             }
         }
-        &:active .menu__actions{
-            animation: actions 400ms 200ms ease-in-out forwards;
+        &:hover .menu__actions{
+            animation: actions 400ms ease-in-out 200ms forwards;
         }
-        &:active .menu__icon{
+        &:hover .menu__icon{
             transform: rotate(360deg);
         }
     } 
