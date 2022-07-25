@@ -744,10 +744,11 @@ body {
 }
 .restaurant__photo {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: relative;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 95%;
+  transform: translateY(-95%);
   z-index: 1;
 }
 .restaurant__news {
