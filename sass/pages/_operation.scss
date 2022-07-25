@@ -22,9 +22,9 @@
             &::after{
                 opacity: 1;
             }
-            & .operation__icon{
-                color: $color-primary;
-            }
+             & .operation__icon{
+                animation: operation-icon 400ms ease-in-out both;
+             }
         }
         &::after{
             @include pseudo-position;
@@ -52,5 +52,17 @@
     &__description{
         font-size: 1em;
         font-weight: 700;
+    }
+}
+
+@keyframes operation-icon{
+    0%{
+        opacity: 1;
+        color: #7e7e7e;
+
+    }
+    100%{
+        opacity: 1;
+        color: $color-primary;
     }
 }
