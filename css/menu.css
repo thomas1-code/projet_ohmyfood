@@ -434,12 +434,29 @@ body {
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all 1000ms ease-in-out 200ms;
 }
 .btn-heart__solid:hover {
-  opacity: 1;
+  -webkit-animation: heart 1000ms ease-in-out 200ms forwards;
+          animation: heart 1000ms ease-in-out 200ms forwards;
 }
 
+@-webkit-keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .header, .header-menu {
   height: 65px;
   display: flex;
@@ -533,8 +550,8 @@ body {
   margin-bottom: 1rem;
   border-radius: 15px;
   cursor: pointer;
-  -webkit-animation: anim-menu 1200ms 400ms ease-in-out backwards;
-          animation: anim-menu 1200ms 400ms ease-in-out backwards;
+  -webkit-animation: anim-menu 1200ms ease-in-out 400ms backwards;
+          animation: anim-menu 1200ms ease-in-out 400ms backwards;
 }
 .menu__card--1 {
   -webkit-animation-delay: 120ms;
@@ -576,11 +593,11 @@ body {
   -webkit-animation-delay: 1200ms;
           animation-delay: 1200ms;
 }
-.menu__card:active .menu__actions {
-  -webkit-animation: actions 400ms 200ms ease-in-out forwards;
-          animation: actions 400ms 200ms ease-in-out forwards;
+.menu__card:hover .menu__actions {
+  -webkit-animation: actions 400ms ease-in-out 200ms forwards;
+          animation: actions 400ms ease-in-out 200ms forwards;
 }
-.menu__card:active .menu__icon {
+.menu__card:hover .menu__icon {
   transform: rotate(360deg);
 }
 .menu__body {
