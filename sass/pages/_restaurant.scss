@@ -2,32 +2,60 @@
     height: 1220px;
     padding: $padding-dimension;
     background-color: $color-background;
+    @include tablet{
+        display: flex;
+        flex-wrap: wrap;  
+        justify-content: space-around;  
+        height: 750px;
+    }
     &__heading{
         margin-bottom: 1.5rem;
         font-size: 1.5em;
         font-weight: 900;
+        @include tablet{
+            text-align: center;
+            width: 100%;
+            font-size: 1.6em;
+        }
     }
     &__card{
         width: 100%;
-        height: 22%;
+        height: 250px;
         background-color: #fff;
         border-radius: 20px;
         margin-bottom: 1rem;
         overflow: hidden;
         position: relative;
+        @include tablet{
+            width: 40%;
+            min-width: 350px;
+            @include shadow-base;
+            transition: box-shadow 600ms ease-in-out 200ms;
+            &:hover{
+                box-shadow: 0 5px 15px darken($color-background, 35%);
+            }
+            &:hover .restaurant__photo{
+                width: 125%;
+            }
+        }
     }
     &__image{
         width: 100%;
         height: 70%;
         overflow: hidden;
+        position: relative;
     }
     &__photo{
         width: 100%;
         object-fit: cover;
-        position: relative;
+        position: absolute;
         top: 95%;
-        transform: translateY(-95%);
+        left: 50%;
+        transform: translate(-50%,-95%);
         z-index: 1;
+        @include tablet{
+            transition: width 600ms ease-in-out 200ms;
+        }
     }
     &__news{
         background-color: #99e2d0;
@@ -59,5 +87,14 @@
     }
     &__copy{
         font-size: 1em;
+    }
+}
+
+@keyframes photo-zoom{
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 125%;
     }
 }

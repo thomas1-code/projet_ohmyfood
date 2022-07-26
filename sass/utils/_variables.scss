@@ -12,3 +12,5 @@ $circle-radius: 50%;
 $num-menu: 10;
 $anim-menu-dur: 1200ms;
 $anim-menu-delay: $anim-menu-dur / $num-menu;
+
+$breakpoints: (tablet:768px, desktop:992px);

@@ -6,13 +6,27 @@
     border-radius: 40px 40px 0 0;
     z-index: 50;
     padding: 2rem 0.75rem;
+    @include tablet{
+        padding: 2rem 3rem;
+    }
+    @include desktop-only{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
     &__header{
         display: flex;
         justify-content: space-between;
         margin: 0 1rem 2rem 0.25rem;
+        @include desktop-only{
+            width: 100%;
+        }
     }
     &__container{
         margin-bottom: 2.5rem;
+        @include desktop-only{
+            width: 45%;
+        }
     }
     &__tittle{
         font-size: 1em;
@@ -31,6 +45,7 @@
         margin-bottom: 1rem;
         border-radius: 15px;
         cursor: pointer;
+        overflow: hidden;
         animation: anim-menu $anim-menu-dur ease-in-out 400ms backwards;
         @for $i from 1 through $num-menu{
             &--#{$i}{
@@ -38,10 +53,10 @@
             }
         }
         &:hover .menu__actions{
-            animation: actions 400ms ease-in-out 200ms forwards;
+            animation: actions 600ms ease-in-out 200ms forwards;
         }
         &:hover .menu__icon{
-            transform: rotate(360deg);
+            animation: actions-icon 600ms ease-in-out 200ms forwards;
         }
     } 
     &__body{
@@ -73,7 +88,7 @@
         background-color: $color-tertiary;
         border-radius: 0 15px 15px 0;
         @include flexbox-center;
-        opacity: 0;
+        overflow: hidden;
     }
     &__icon{
         color: $color-tertiary;
@@ -84,12 +99,15 @@
         width: 1.2rem;
         border-radius: 1.2rem;
         text-align: center;
-        transition: transform 400ms linear 200ms;
     }
     &__btn{
         text-align: center;
         margin-top: 3rem;
         padding-bottom: 3rem;
+        @include desktop-only{
+            width: 45%;
+            align-self: center;
+        }
     }
 }
 
@@ -107,13 +125,18 @@
 
 @keyframes actions{
     0%{
-        opacity: 1;
-        transform: translate(1);
         width: 0;
     }
     100%{
-        opacity: 1;
-        transform: translate(0);
         width: 21%;
+    }
+}
+
+@keyframes actions-icon{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
     }
 }

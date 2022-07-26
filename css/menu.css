@@ -525,13 +525,35 @@ body {
   z-index: 50;
   padding: 2rem 0.75rem;
 }
+@media screen and (min-width: 768px) {
+  .menu {
+    padding: 2rem 3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
 .menu__header {
   display: flex;
   justify-content: space-between;
   margin: 0 1rem 2rem 0.25rem;
 }
+@media screen and (min-width: 992px) {
+  .menu__header {
+    width: 100%;
+  }
+}
 .menu__container {
   margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 992px) {
+  .menu__container {
+    width: 45%;
+  }
 }
 .menu__tittle {
   font-size: 1em;
@@ -550,6 +572,7 @@ body {
   margin-bottom: 1rem;
   border-radius: 15px;
   cursor: pointer;
+  overflow: hidden;
   -webkit-animation: anim-menu 1200ms ease-in-out 400ms backwards;
           animation: anim-menu 1200ms ease-in-out 400ms backwards;
 }
@@ -594,11 +617,12 @@ body {
           animation-delay: 1200ms;
 }
 .menu__card:hover .menu__actions {
-  -webkit-animation: actions 400ms ease-in-out 200ms forwards;
-          animation: actions 400ms ease-in-out 200ms forwards;
+  -webkit-animation: actions 600ms ease-in-out 200ms forwards;
+          animation: actions 600ms ease-in-out 200ms forwards;
 }
 .menu__card:hover .menu__icon {
-  transform: rotate(360deg);
+  -webkit-animation: actions-icon 600ms ease-in-out 200ms forwards;
+          animation: actions-icon 600ms ease-in-out 200ms forwards;
 }
 .menu__body {
   width: 100%;
@@ -637,7 +661,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  overflow: hidden;
 }
 .menu__icon {
   color: #99E2D0;
@@ -648,12 +672,17 @@ body {
   width: 1.2rem;
   border-radius: 1.2rem;
   text-align: center;
-  transition: transform 400ms linear 200ms;
 }
 .menu__btn {
   text-align: center;
   margin-top: 3rem;
   padding-bottom: 3rem;
+}
+@media screen and (min-width: 992px) {
+  .menu__btn {
+    width: 45%;
+    align-self: center;
+  }
 }
 
 @-webkit-keyframes anim-menu {
@@ -681,25 +710,33 @@ body {
 }
 @-webkit-keyframes actions {
   0% {
-    opacity: 1;
-    transform: translate(1);
     width: 0;
   }
   100% {
-    opacity: 1;
-    transform: translate(0);
     width: 21%;
   }
 }
 @keyframes actions {
   0% {
-    opacity: 1;
-    transform: translate(1);
     width: 0;
   }
   100% {
-    opacity: 1;
-    transform: translate(0);
     width: 21%;
+  }
+}
+@-webkit-keyframes actions-icon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes actions-icon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }/*# sourceMappingURL=menu.css.map */

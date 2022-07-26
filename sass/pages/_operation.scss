@@ -1,10 +1,29 @@
 .operation{
     height: 420px;
     padding: $padding-dimension;
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2.5rem 1rem;
+    }
+    @include desktop-only{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: 250px;
+    }
     &__tittle{
         font-size: 1.5em;
         font-weight: 900;
         margin-bottom: 2rem;
+        @include desktop-only{
+            width: 100%;
+            font-size: 1.6em;
+        }
+        @include desktop-only{
+            text-align: center;
+        }
     }
     &__item{
         height: 70px;
@@ -18,6 +37,14 @@
         position: relative;
         z-index: 1;
         cursor: pointer;
+        @include tablet{
+            width: 50%;
+            margin: 0.6rem;
+        }
+        @include desktop-only{
+            width: 30%;
+            margin: 0;
+        }
         &:hover{
             &::after{
                 opacity: 1;
@@ -32,7 +59,12 @@
             border-radius: 25px;
             opacity: 0;
             z-index: -1;
-            transition: opacity 400ms ease-in-out;
+            transition: all 400ms ease-in-out ;
+            @include tablet{ 
+                box-shadow: 0 5px 15px darken($color-background, 25%);
+                display: flex;
+                flex-direction: column;
+            }
         }
     }
     &__number{
