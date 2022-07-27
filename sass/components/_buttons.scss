@@ -21,11 +21,9 @@
     cursor: pointer;
     &__regular{
         opacity: 1;
-        // font-size: 1.1em;
     }
     &__solid{
         opacity: 0;
-        // font-size: 1.1em;
         background: linear-gradient($color-primary, $color-secondary);
         background-clip: text;
         -webkit-text-fill-color: transparent;
