@@ -339,7 +339,7 @@ body {
 
 .menu__heading {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
-  font-size: 1.8em;
+  font-size: 1.7em;
   font-weight: 400;
 }
 
@@ -421,15 +421,14 @@ body {
 
 .btn-heart {
   transform: scale(1, 1.1);
+  font-size: 1.5em;
   cursor: pointer;
 }
 .btn-heart__regular {
   opacity: 1;
-  font-size: 1.4em;
 }
 .btn-heart__solid {
   opacity: 0;
-  font-size: 1.4em;
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
           background-clip: text;
@@ -438,6 +437,12 @@ body {
 .btn-heart__solid:hover {
   -webkit-animation: heart 1000ms ease-in-out 200ms forwards;
           animation: heart 1000ms ease-in-out 200ms forwards;
+}
+
+#btn-heart-restaurant {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 0.25rem;
 }
 
 @-webkit-keyframes heart {

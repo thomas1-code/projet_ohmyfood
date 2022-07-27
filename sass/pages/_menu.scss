@@ -5,7 +5,7 @@
     margin-top: -40px;
     border-radius: 40px 40px 0 0;
     z-index: 50;
-    padding: 2rem 0.75rem;
+    padding: 1.5rem 0.75rem 2rem 0.75rem;
     @include tablet{
         padding: 2rem 3rem;
     }
@@ -17,7 +17,8 @@
     &__header{
         display: flex;
         justify-content: space-between;
-        margin: 0 1rem 2rem 0.25rem;
+        align-items: center;
+        margin: 0 1rem 1.5rem 0.25rem;
         @include tablet{
             margin-right: 0.25rem;
         }

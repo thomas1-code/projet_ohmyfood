@@ -17,14 +17,15 @@
 
 .btn-heart{
     transform: scale(1, 1.1);
+    font-size: 1.5em;
     cursor: pointer;
     &__regular{
         opacity: 1;
-        font-size: 1.4em;
+        // font-size: 1.1em;
     }
     &__solid{
         opacity: 0;
-        font-size: 1.4em;
+        // font-size: 1.1em;
         background: linear-gradient($color-primary, $color-secondary);
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -32,6 +33,12 @@
             animation: heart 1000ms ease-in-out 200ms forwards;
         }
     }
+}
+
+#btn-heart-restaurant{
+    position: absolute;
+    bottom: 1.25rem;
+    right: 0.25rem;
 }
 
 @keyframes heart{
