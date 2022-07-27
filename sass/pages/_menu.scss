@@ -9,19 +9,20 @@
     @include tablet{
         padding: 2rem 3rem;
     }
+    @include desktop-only{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
     &__header{
         display: flex;
         justify-content: space-between;
         margin: 0 1rem 2rem 0.25rem;
         @include tablet{
-            margin-right: 0;
+            margin-right: 0.25rem;
         }
-    }
-    &__block{
         @include desktop-only{
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            width: 100%;
         }
     }
     &__container{
@@ -108,9 +109,9 @@
     &__btn{
         text-align: center;
         margin-top: 3rem;
-        padding-bottom: 1.5rem;
+        padding-bottom: 3rem;
         @include desktop-only{
-            align-self: center;
+            width: 100%;
             margin-top: 0;
         }
     }
