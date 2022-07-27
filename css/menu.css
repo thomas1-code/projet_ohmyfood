@@ -530,21 +530,21 @@ body {
     padding: 2rem 3rem;
   }
 }
-@media screen and (min-width: 992px) {
-  .menu {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-}
 .menu__header {
   display: flex;
   justify-content: space-between;
   margin: 0 1rem 2rem 0.25rem;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .menu__header {
-    width: 100%;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu__block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 .menu__container {
@@ -626,32 +626,35 @@ body {
 }
 .menu__body {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
   padding: 0.75rem 0 0.75rem 0.5rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu__subtittle {
+.menu__description {
   width: 81%;
+  display: flex;
+  flex-direction: column;
+}
+.menu__subtittle {
   padding-bottom: 0.25rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu__description {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.9em;
-}
 .menu__copy {
-  width: 75%;
+  font-size: 0.9em;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .menu__price {
+  align-self: flex-end;
+  margin: 0 1rem;
   font-weight: 700;
-  margin: 0 1.5rem;
+  font-size: 0.9em;
 }
 .menu__actions {
   height: auto;
@@ -676,12 +679,12 @@ body {
 .menu__btn {
   text-align: center;
   margin-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 992px) {
   .menu__btn {
-    width: 45%;
     align-self: center;
+    margin-top: 0;
   }
 }
 
