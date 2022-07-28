@@ -26,16 +26,17 @@
         opacity: 0;
         background: linear-gradient($color-primary, $color-secondary);
         background-clip: text;
-        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        color: transparent;
         &:hover{
             animation: heart 1000ms ease-in-out 200ms forwards;
         }
     }
 }
 
-// position for menu cards
+// position for restaurant cards
 
-#btn-heart-restaurant{
+#btn-heart-card-1, #btn-heart-card-2, #btn-heart-card-3, #btn-heart-card-4{
     position: absolute;
     bottom: 1.25rem;
     right: 0.25rem;

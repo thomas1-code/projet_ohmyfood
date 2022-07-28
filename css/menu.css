@@ -434,16 +434,16 @@ body {
 .btn-heart__solid {
   opacity: 0;
   background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
   -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 .btn-heart__solid:hover {
   -webkit-animation: heart 1000ms ease-in-out 200ms forwards;
           animation: heart 1000ms ease-in-out 200ms forwards;
 }
 
-#btn-heart-restaurant {
+#btn-heart-card-1, #btn-heart-card-2, #btn-heart-card-3, #btn-heart-card-4 {
   position: absolute;
   bottom: 1.25rem;
   right: 0.25rem;
