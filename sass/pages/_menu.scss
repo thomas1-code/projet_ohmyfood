@@ -17,7 +17,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 1rem 1.5rem 0.25rem;
+        margin: 0 0.5rem 1.5rem 0.25rem;
         @include tablet{
             margin-right: 0.25rem;
         }
@@ -34,12 +34,17 @@
     &__tittle{
         font-size: 1em;
         font-weight: 400;
-        margin: 0 0 0.25rem 0.25rem;
-    }
-    &__bar{
-        width: 40px;
-        border-bottom: 3px solid $color-tertiary;
-        margin: 0 0 1rem 0.25rem;
+        margin: 0 0 1.25rem 0.25rem;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: $color-tertiary;
+        }
     }
     &__card{
         display: flex;
