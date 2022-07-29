@@ -694,8 +694,6 @@ body {
   background-color: #f6f6f6;
   border-radius: 25px;
   box-shadow: 0 5px 10px #c3c3c3;
-  position: relative;
-  z-index: 1;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
@@ -710,32 +708,19 @@ body {
     margin: 0;
   }
 }
-.operation__item:hover::after {
-  opacity: 1;
-}
-.operation__item:hover .operation__icon {
-  -webkit-animation: operation-icon 400ms ease-in-out both;
-          animation: operation-icon 400ms ease-in-out both;
-}
-.operation__item::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #f5edff;
-  border-radius: 25px;
-  opacity: 0;
-  z-index: -1;
-  transition: all 400ms ease-in-out;
+.operation__item:hover {
+  -webkit-animation: operation-background 400ms ease-in-out forwards;
+          animation: operation-background 400ms ease-in-out forwards;
 }
 @media screen and (min-width: 768px) {
-  .operation__item::after {
-    box-shadow: 0 5px 15px #b6b6b6;
-    display: flex;
-    flex-direction: column;
+  .operation__item:hover {
+    -webkit-animation: operation-background-shadow 400ms ease-in-out forwards;
+            animation: operation-background-shadow 400ms ease-in-out forwards;
   }
+}
+.operation__item:hover .operation__icon {
+  -webkit-animation: operation-icon 400ms ease-in-out forwards;
+          animation: operation-icon 400ms ease-in-out forwards;
 }
 .operation__number {
   height: 25px;
@@ -758,24 +743,56 @@ body {
   font-weight: 700;
 }
 
-@-webkit-keyframes operation-icon {
+@-webkit-keyframes operation-background {
   0% {
-    opacity: 1;
-    color: #7e7e7e;
+    background: #f6f6f6;
   }
   100% {
-    opacity: 1;
-    color: #9356DC;
+    background: #f5edff;
   }
 }
 
-@keyframes operation-icon {
+@keyframes operation-background {
   0% {
-    opacity: 1;
+    background: #f6f6f6;
+  }
+  100% {
+    background: #f5edff;
+  }
+}
+@-webkit-keyframes operation-background-shadow {
+  0% {
+    background: #f6f6f6;
+    box-shadow: 0 5px 10px #c3c3c3;
+  }
+  100% {
+    background: #f5edff;
+    box-shadow: 0 5px 15px #aaaaaa;
+  }
+}
+@keyframes operation-background-shadow {
+  0% {
+    background: #f6f6f6;
+    box-shadow: 0 5px 10px #c3c3c3;
+  }
+  100% {
+    background: #f5edff;
+    box-shadow: 0 5px 15px #aaaaaa;
+  }
+}
+@-webkit-keyframes operation-icon {
+  0% {
     color: #7e7e7e;
   }
   100% {
-    opacity: 1;
+    color: #9356DC;
+  }
+}
+@keyframes operation-icon {
+  0% {
+    color: #7e7e7e;
+  }
+  100% {
     color: #9356DC;
   }
 }

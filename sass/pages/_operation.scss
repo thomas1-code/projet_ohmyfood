@@ -34,8 +34,6 @@
         background-color: $color-background;
         border-radius: 25px;
         @include shadow-base;
-        position: relative;
-        z-index: 1;
         cursor: pointer;
         @include tablet{
             width: 50%;
@@ -46,24 +44,12 @@
             margin: 0;
         }
         &:hover{
-            &::after{
-                opacity: 1;
+            animation: operation-background 400ms ease-in-out forwards;
+            @include tablet{
+                animation: operation-background-shadow 400ms ease-in-out forwards;
             }
-             & .operation__icon{
-                animation: operation-icon 400ms ease-in-out both;
-             }
-        }
-        &::after{
-            @include pseudo-position;
-            background: #f5edff;  
-            border-radius: 25px;
-            opacity: 0;
-            z-index: -1;
-            transition: all 400ms ease-in-out ;
-            @include tablet{ 
-                box-shadow: 0 5px 15px darken($color-background, 25%);
-                display: flex;
-                flex-direction: column;
+            & .operation__icon{
+                animation: operation-icon 400ms ease-in-out forwards;
             }
         }
     }
@@ -87,14 +73,32 @@
     }
 }
 
+@keyframes operation-background{
+    0%{
+        background: $color-background;
+    }
+    100%{
+        background: #f5edff;
+    }
+}
+
+@keyframes operation-background-shadow{
+    0%{
+        background: $color-background;
+        @include shadow-base;
+    }
+    100%{
+        background: #f5edff;
+        box-shadow: 0 5px 15px darken($color-background, 30%);
+    }
+}
+
 @keyframes operation-icon{
     0%{
-        opacity: 1;
         color: #7e7e7e;
 
     }
     100%{
-        opacity: 1;
         color: $color-primary;
     }
 }
